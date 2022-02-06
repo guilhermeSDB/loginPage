@@ -1,0 +1,318 @@
+@import "global.scss";
+
+body{
+
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: $secundary;
+
+    header {
+        nav{
+            ul{
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+    
+                li{
+                    text-decoration: none;
+                    a{
+                        text-decoration:none;
+                    }
+                }
+            }
+        }
+    }
+    
+    main#group_sections {
+        display: grid;
+        grid-template-columns: 1fr;
+    
+        @media screen and (min-width: $notebook) {
+            grid-template-columns: repeat(2, 1fr);
+           
+        }
+    
+       
+        section#bg-page{
+            background-color: $primary;
+            display: none;
+
+            @media screen and (min-width: $notebook) {
+                text-align: center;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              div.firstAccess{
+                display: none;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 3rem;
+                transition: 0.3s;
+
+                span.pre_text{
+                    white-space: nowrap;
+                }
+
+                div.text_wraper{
+                    overflow-y: hidden;
+                    height: 45px;
+
+                    div.innerText{
+                        background: linear-gradient(to right, #eb21f3 0%, #753aad 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    
+                }
+
+                div.text_wraper div.innerText{
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 45px;
+                }
+
+              }
+
+            div.alreadyRegistered{
+                display: none;
+                transition: 0.3s;
+            
+                h1{
+                    font-size: 2rem;
+                }
+
+            }
+    
+        }
+    
+        section#forms{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: 0.3s;
+
+            form#forms_{
+                display: none;
+                width: 100%;
+                flex-grow: 1;
+                margin: 2rem;
+
+                @media screen and (min-width: $tablets) { margin: 10rem; }
+
+                div.forms_login_register{
+                    display: flex;
+                    flex-grow: 1;                
+                    width: 100%;
+    
+                    div.forms_content{
+                        width: 100%;
+                        background-color: white;
+                        border-radius: 10px;
+                        text-align: left;
+    
+                        div.nav_forms{
+                            display: flex;
+                            width: 100%;
+    
+                            .border-active{
+                                border-image: linear-gradient(to right, #eb21f3 0%, #753aad 100%);
+                                border-image-slice: 1;  
+                            }
+    
+        
+                            h3{
+                                text-align: center;
+                                cursor: pointer;
+                                padding: 1rem 3rem;
+                                width: 100%;
+                                border-bottom: double 4px transparent;
+                                border-radius: 10px;
+                                background-origin: border-box;
+                                background-clip: content-box, border-box;   
+                                transition: 0.3s;
+                                
+                            }
+    
+                            h3:first-child{
+                                border-image: linear-gradient(to right, #eb21f3 0%, #753aad 100%);
+                                border-image-slice: 1;                                                     
+                            }
+                        }
+    
+                        div#login_page{
+                            padding: 1rem 2rem;
+    
+                            h1{
+                                font-size: 2rem;
+                                margin: 1rem 0;
+                            }
+    
+                            button#loginButton{
+                                border-radius: 5px;
+                                padding: .5rem;
+                                font-weight: 600;
+                                background: linear-gradient(to right, #eb21f3 0%, #753aad 100%);
+                                color: white;
+                                width: 100%;
+                            }
+    
+                            p#lostPassword{
+                                font-size: .8rem;
+                                margin: .5rem;
+                                color: rgb(141, 140, 140);
+                            }
+                        }
+                        
+    
+                        input{
+                            padding: .3rem ;
+                            border-radius: 5px;
+                            display: block;
+                            margin: 1rem 0;
+                            outline: none;
+                            border: none;
+                        }
+    
+                    }
+    
+                    
+                }
+            }
+
+            form#card_{
+                display: none;
+                width: 100%;
+                flex-grow: 1;
+                transition: 0.3s;
+
+                div.card-groups{
+                    transition: 0.3s;
+                    
+                    @media screen and (min-width: $tablets) {
+                        flex-grow: 1;
+                    }
+    
+                    div.card_user{
+                        display: block;
+                        flex-grow: 1;
+                        margin: 2rem;
+                        border-radius: 10px;
+                        background-color: white;                
+                        overflow: hidden;
+                        -webkit-box-shadow: 0px 0px 22px 1px #9d9d9d; 
+                        box-shadow: 0px 0px 22px 1px #9d9d9d;
+    
+                        @media screen and (min-width: $tablets) {
+                            padding: 0 2rem;
+                            margin: 0rem 4rem;
+                        }
+        
+                        div.card_infos{                    
+                            display: block;
+                            margin: 1rem auto;
+                            text-align: center;
+    
+                            @media screen and (min-width: $tablets) {
+                                display: flex;
+                                align-items: center;
+                                text-align: inherit;
+                            }
+    
+    
+                            img{
+                                width: 100px;
+                                height: 100px;
+                                border-radius: 9999px;
+                                object-fit: cover;
+                            }
+        
+                            div{
+                                margin: 1rem;
+        
+                                h2{
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                }
+                                
+                                p{
+                                    font-size: 1rem;
+                                    color: gray;
+                                }
+        
+                                button{
+                                    margin: .3rem 0;
+                                    color: red;
+                                    border: 1px solid red;
+                                    border-radius: 5px;
+                                    padding: .3rem 1.6rem;    
+                                    
+                                    &:hover{
+                                        background-color: red;
+                                        color: white;
+                                        transition: 0.4s;
+                                    }
+                                }
+    
+                                
+        
+                            }
+        
+                        }
+        
+                        div.card_password{
+                            display: flex;
+                            justify-content: center;
+                            margin: 1rem;
+                            
+                            @media screen and (min-width: $tablets) {
+                                justify-content: flex-start;
+                                margin: 0 1rem 1.5rem 0;
+                            }
+                            
+    
+                            input{
+                                width: 100%;
+                                border-radius: 5px;
+                                padding: .5rem 1rem;
+                                color: rgb(55 65 81);
+                                border: none;
+                                outline: none;
+                                background-color: rgb(229 231 235);
+                            }
+        
+                            input::placeholder{
+                                color: rgb(55 65 81);
+                            }
+        
+                            button{
+                                border: 1px solid rgb(13 148 136);
+                                color: rgb(13 148 136);
+                                padding: 0 1rem;
+                                border-radius: 4px;
+                                margin: 0 .3rem;
+    
+                                &:hover{
+                                    background-color:rgb(13 148 136);
+                                    color: white;
+                                    transition: 0.4s;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+}
+

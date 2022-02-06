@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----Import favicon ---->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!----Import SCSS ---->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Index - Nome do sistema</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="" alt="LOGO"></a></li>
+                <li><a href="#">Conecte-se</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="group_sections">
+        <section id="bg-page">
+
+            <div class="firstAccess">   
+                <div class="wraper">
+                    <span class="pre_text">Feito para</span>   
+                    <div class="text_wraper">
+                        <div class="innerText">
+                            <span>pessoas</span>
+                            <span>desenvolvedores</span>
+                            <span>empresas</span>
+                            <span>freelancers</span>
+                            <span>voce</span>
+                        </div>
+                    </div>        
+                </div>              
+            </div>
+
+            <div class="alreadyRegistered">
+                <h1>Seja bem-vindo(a) de volta</h1>
+                <p>Faça login para começar.</p>
+            </div>
+            
+        </section>
+
+        <section id="forms">
+            
+            <!-- Login or Register Start -->
+            <form id="forms_" >
+                <div class="forms_login_register">
+                    <div class="forms_content">
+                        <div class="nav_forms">
+                            <h3 class="entrar">Entrar</h3>
+                            <h3 class="registrar">Registrar</h3>
+                        </div>
+                        <div id="login_page">
+                            <h1>Entrar</h1>
+                            <label for="login">Name</label>
+                            <input type="text" name="login" placeholder="Login" id="loginName">
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" placeholder="******" id="">
+                            <button id="loginButton">Logar</button>
+                            <p id="lostPassword">Esqueceu sua senha? <a href="#">Clique aqui</a></p>
+                        </div>
+                        <div id="register_page">
+        
+                        </div>
+                    </div>
+                    
+                </div>               
+            </form>
+            <!-- Login or Register End -->
+
+            <!--Card Groups Start--->
+            <form id="card_">
+                <div class="card-groups">
+                    <div class="card_user">
+                        <div class="card_infos">
+                            <img src="src/people.jpg" alt="">
+                            <div class="userInfo">
+                                <p>Usuario</p>                            
+                            </div>                    
+                        </div>
+                        <div class="card_password">
+                            <input type="password" name="password" placeholder="Sua senha" id="password">
+                            <button>Entrar</button>
+                        </div>
+                    </div>  
+                </div>
+            </form>            
+            <!--Card Groups end--->
+            
+                    
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/textSlider.js"></script>
+</body>
+</html>
