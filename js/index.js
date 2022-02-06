@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    if(localStorage.getItem('user') != ''){
+    if(localStorage.getItem('user') != '' && localStorage.getItem('user') != null){
         $('form#card_').css('display','flex')
         $('.alreadyRegistered').css('display','block')     
         var user = localStorage.getItem('user');
