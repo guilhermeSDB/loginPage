@@ -1,10 +1,10 @@
 $(document).ready(function(){
+    localStorage.setItem('user', '')
 
     if(localStorage.getItem('user').length > 0 && localStorage.getItem('user') != undefined){
         $('form#card_').css('display','flex')
         $('.alreadyRegistered').css('display','block')     
         var user = localStorage.getItem('user');
-        console.log('Tem user sim')
         let divUser = '.userInfo';
         let userName = `<h2>${user}</h2>`;
         let userNameButton = `<button class="changeUser">Não é ${user}?</button>`;        
@@ -12,7 +12,6 @@ $(document).ready(function(){
         $(divUser).prepend(userName);
         $(divUser).append(userNameButton);
     }else if(localStorage.getItem('user') == ''){
-        console.log('Primeiro acesso')
         $('form#forms_').css('display','flex')
         $('.firstAccess').css('display','block')  
         
