@@ -10,7 +10,7 @@ $(document).ready(function(){
 
         $(divUser).prepend(userName);
         $(divUser).append(userNameButton);
-    }else if(localStorage.getItem('user') == ""){
+    }else{
         $('form#forms_').css('display','flex')
         $('.firstAccess').css('display','block')  
     }
