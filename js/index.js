@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    localStorage.setItem('user', '')
 
-    if(localStorage.getItem('user').length > 0 && localStorage.getItem('user') != undefined){
+    if(localStorage.getItem('user') != ''){
         $('form#card_').css('display','flex')
         $('.alreadyRegistered').css('display','block')     
         var user = localStorage.getItem('user');
@@ -11,10 +10,9 @@ $(document).ready(function(){
 
         $(divUser).prepend(userName);
         $(divUser).append(userNameButton);
-    }else if(localStorage.getItem('user') == ''){
+    }else if(localStorage.getItem('user') == ""){
         $('form#forms_').css('display','flex')
         $('.firstAccess').css('display','block')  
-        
     }
 
     $('.changeUser').on('click' , function(){
@@ -30,14 +28,10 @@ $(document).ready(function(){
         $(target).css('border-image-width','1').addClass('border-active')
     })
 
-    $('button#loginButton').on('click', function(){
+    $('#loginButton').on('click', function(){
         let userName = $('input#loginName').val();
         localStorage.setItem('user',userName);
         console.log(userName)
-        window.location.reload(true)
     })
-
-
-
 
 })
